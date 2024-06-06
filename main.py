@@ -10,7 +10,7 @@ from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk import WebClient
 
-from tools.feedback import log_user_feedback
+from tools.feedback import log_user_feedback, read_feedback
 from tools.linear import create_linear_issue, list_linear_teams
 from tools.slack import _list_users, message_user, no_action
 from tools.utils import call_tool, parse_function
@@ -31,6 +31,7 @@ ENABLED_TOOLS = [
     create_linear_issue,
     list_linear_teams,
     log_user_feedback,
+    read_feedback,
 ]
 ENABLED_CHANNELS = ["C05H2KT4LP5", "C05RKHTR0LQ"]  # bugs  # coworker-testing
 
